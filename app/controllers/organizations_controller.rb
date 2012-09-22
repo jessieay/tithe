@@ -5,7 +5,7 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    @organization = Organization.new
+    @organization = Organization.new(params[:organization])
       if @organization.save
         redirect_to @organization, notice: "Organization saved successfully."
       end
