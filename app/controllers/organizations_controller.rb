@@ -7,7 +7,7 @@ class OrganizationsController < ApplicationController
   def create
     @organization = Organization.new
       if @organization.save
-        redirect_to @organzation, notice: "Organization saved successfully."
+        redirect_to @organization, notice: "Organization saved successfully."
       end
   end
 
