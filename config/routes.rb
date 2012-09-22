@@ -1,4 +1,14 @@
 Tithe::Application.routes.draw do
+  get "organizations/_form"
+
+  get "organizations/new"
+
+  get "organizations/show"
+
+  get "organizations/edit"
+
+  get "organizations/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
