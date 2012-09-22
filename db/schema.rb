@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922164245) do
+ActiveRecord::Schema.define(:version => 20120922212940) do
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "transactions", :force => true do |t|
+    t.string   "stripe_customer_token"
+    t.decimal  "amount"
+    t.integer  "user_id"
+    t.integer  "organization_id"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "users", :force => true do |t|
