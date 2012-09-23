@@ -38,7 +38,7 @@ describe UsersController do
 
       it 'creates a new user' do
         user = assigns(:user)
-        user.username.should == 'billy'
+        user.email.should == 'b@b.com'
       end
 
       it "logs the user in" do
