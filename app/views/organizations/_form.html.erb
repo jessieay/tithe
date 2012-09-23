@@ -1,0 +1,15 @@
+<%= form_for(@organization) do |f|%>
+  <div class="field">
+    <%= f.label "Organization name:" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Organization description:" %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit Organization", :class=>"btn btn-primary btn-large" %>
+  </div>
+<% end %>

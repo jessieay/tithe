@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'stripe'
 
 group :development, :test do
   gem 'shoulda-matchers'
@@ -21,6 +22,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'therubyracer', :platforms => :ruby
+  gem 'execjs'
 end
