@@ -11,6 +11,8 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rb-fsevent'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :assets do
