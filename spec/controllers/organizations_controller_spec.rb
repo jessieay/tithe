@@ -2,38 +2,34 @@ require 'spec_helper'
 
 describe OrganizationsController do
 
-  describe "GET '_form'" do
-    it "returns http success" do
-      get '_form'
-      response.should be_success
+  describe "#new" do
+    it "assigns a new Organization to @organization" do
+      get(:new)
+      assigns(:organization).should be_new_record
     end
   end
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
-    end
-  end
+  describe "#create" do
+    context "when given valid parameters" do
+      it "redirects to the organization" do
+       post(:create)
+       response.should redirect_to organization_path(assigns(:organization))
+      end
+     end
+   
+    context "when given invalid parameters" do
+      before :each do
+        Organization.any_instance.stub(:save).and_return(false)
+        post(:create)
+      end
+      
+      it "renders new" do
+        response.should render_template('new')
+      end
 
-  describe "GET 'show'" do
-    it "returns http success" do
-      get 'show'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'index'" do
-    it "returns http success" do
-      get 'index'
-      response.should be_success
+      it "does not save the organization" do
+        assigns(:organization).should be_new_record
+      end
     end
   end
 

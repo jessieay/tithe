@@ -1,15 +1,15 @@
 <h1>All Organizations</h1>
 <h3><%= link_to 'Add New Organization', new_organization_path %></h3>
 <table>
-    <tr>
-      <th>Organization Name</th>
-      <th>Organization Description</th>
-    </tr>
+  <tr>
+    <th>Organization Name</th>
+    <th>Organization Description</th>
+  </tr>
 
-     <% @organizations.each do |org| %>
-          <tr>
-             <td><%= org.name %></td>
-             <td><%= org.description %> </td>
-          </tr>
-       <% end %>
- </table>
+  <% @organizations.each do |org| %>
+    <tr>
+      <td><%= org.name %></td>
+      <td><%= org.description %> </td>
+    </tr>
+  <% end %>
+</table>

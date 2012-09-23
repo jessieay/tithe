@@ -6,9 +6,11 @@ class OrganizationsController < ApplicationController
 
   def create
     @organization = Organization.new(params[:organization])
-      if @organization.save
-        redirect_to @organization, notice: "Organization saved successfully."
-      end
+    if @organization.save
+      redirect_to @organization, notice: "Organization saved successfully."
+    else
+      render :new
+    end
   end
 
   def show
@@ -21,9 +23,9 @@ class OrganizationsController < ApplicationController
 
   def update
     @organization = Organization.find(params[:id])
-      if @organization.update_attributes(params[:organization])
-        redirect_to @organization, notice: 'Organization was successfully updated.'
-      end
+    if @organization.update_attributes(params[:organization])
+     redirect_to @organization, notice: 'Organization was successfully updated.'
+    end
   end
 
   def destroy
