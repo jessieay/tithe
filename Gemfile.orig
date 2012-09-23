@@ -1,0 +1,38 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.8'
+<<<<<<< HEAD
+gem 'stripe'
+gem 'pg'
+=======
+gem 'pg'
+gem 'jquery-rails'
+gem 'bcrypt-ruby', '~> 3.0.0'
+>>>>>>> 8c96c48353b50733af120b25bc71fe2063fd3d33
+
+group :development, :test do
+  gem 'shoulda-matchers'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+<<<<<<< HEAD
+=======
+  gem 'guard-spork'
+  gem 'rb-fsevent'
+>>>>>>> 8c96c48353b50733af120b25bc71fe2063fd3d33
+end
+
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+<<<<<<< HEAD
+end
+
+gem 'jquery-rails'
+=======
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platforms => :ruby
+
+end
+>>>>>>> 8c96c48353b50733af120b25bc71fe2063fd3d33
