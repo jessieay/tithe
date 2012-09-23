@@ -1,7 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Organization.create(:name => 'Agriculture', :description => 'Oversee Food Safety & Food Production')
+Organization.create(:name => 'Commerce', :description => 'Supporting Business Growth')
+Organization.create(:name => 'Defense', :description => 'Military (defending the U.S.)')
+Organization.create(:name => 'Education', :description => 'Funding for Schools & Colleges')
+Organization.create(:name => 'Energy', :description => 'Power production & research')
+Organization.create(:name => 'Health and Human Services', :description => 'Provide Healthcare')
+Organization.create(:name => 'Homeland Security', :description => 'Preventing Terrorism in the U.S.')
+Organization.create(:name => 'Housing and Urban Development', :description => 'Provide Housing')
+Organization.create(:name => 'Interior', :description => 'Maintain Parks & Natural Resources')
+Organization.create(:name => 'Labor', :description => 'Employment & Worker rights')
+Organization.create(:name => 'State', :description => 'Foreign Relations')
+Organization.create(:name => 'Transportation', :description => 'Maintain Transportation Network')
+Organization.create(:name => 'Treasury', :description => 'Maintain a strong economy')
+Organization.create(:name => 'Veterans Affairs', :description => 'Benefits for former Soliders')
+Organization.create(:name => 'Justice', :description => 'Law Enforcement')
+Organization.create(:name => 'Environmental Protection Agency', :description => 'Protect the Environment')
+Organization.create(:name => 'Social Security Administration (SSA)', :description => 'Income for Retirement')
+Organization.create(:name => 'Small Business Administration (SBA)', :description => 'Support Small Businesses')
+Organization.create(:name => 'Nuclear Regulatory Commission (NRC)', :description => 'Nuclear Reactor Safety')
+Organization.create(:name => 'US Agency for International Development (USAID)', :description => 'Helping other countries')
+Organization.create(:name => 'National Aeronautics and Space Administration (NASA)', :description => 'Exploring Space & Earth')
+Organization.create(:name => 'National Science Foundation (NSF)', :description => 'Scientific Research')
+Organization.create(:name => 'General Services Administration (GSA)', :description => 'Manages government buildings & supplies')
+Organization.create(:name => 'Corporation for National and Community Service (CNS)', :description => 'Support volunteers to help communities in U.S. & abroad')
