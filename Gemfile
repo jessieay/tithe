@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'json'
 gem 'stripe'
 
 group :development, :test do
@@ -12,6 +13,8 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rb-fsevent'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :assets do
@@ -20,6 +23,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'therubyracer', :platforms => :ruby
+  gem 'execjs'
 end

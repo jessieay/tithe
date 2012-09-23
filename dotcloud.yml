@@ -1,0 +1,6 @@
+www:
+    type: ruby
+    postbuild: ./postbuild.sh
+    postinstall: ./postinstall.sh
+db: 
+    type: postgresql
