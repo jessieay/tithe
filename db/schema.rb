@@ -11,14 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922212940) do
+ActiveRecord::Schema.define(:version => 20120923032719) do
 
   create_table "organizations", :force => true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
+
+  add_index "organizations", ["user_id"], :name => "index_organizations_on_user_id"
 
   create_table "transactions", :force => true do |t|
     t.string   "stripe_customer_token"
