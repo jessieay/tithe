@@ -4,9 +4,9 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'json'
 gem 'stripe'
 gem 'haml-rails'
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem 'shoulda-matchers'

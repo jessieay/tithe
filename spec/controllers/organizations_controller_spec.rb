@@ -16,13 +16,13 @@ describe OrganizationsController do
        response.should redirect_to organization_path(assigns(:organization))
       end
      end
-   
+
     context "when given invalid parameters" do
       before :each do
         Organization.any_instance.stub(:save).and_return(false)
         post(:create)
       end
-      
+
       it "renders new" do
         response.should render_template('new')
       end
