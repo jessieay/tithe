@@ -5,9 +5,11 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'stripe'
+gem 'haml-rails'
 gem "twitter-bootstrap-rails"
 
 group :development, :test do
+  gem 'quiet_assets'
   gem 'shoulda-matchers'
   gem 'rspec-rails'
   gem 'guard-rspec'
