@@ -1,16 +1,39 @@
 #! /usr/bin/env ruby
 
 require 'yaml'
-environment = YAML.load_file('../environment.yml')
-database = YAML.load_file('config/database.yml')
-prod_db = database['production']
-prod_db['username'] = environment['DOTCLOUD_DB_SQL_LOGIN']
-prod_db['password'] = environment['DOTCLOUD_DB_SQL_PASSWORD']
-prod_db['host'] = environment['DOTCLOUD_DB_SQL_HOST']
-prod_db['port'] = Integer(environment['DOTCLOUD_DB_SQL_PORT'])
-prod_db['adapter'] = 'postgresql'
-prod_db['database'] = 'dotclouddb'
 
-File.open( 'config/database.yml', 'w' ) do |out|
-    YAML.dump( database, out )
+DB_ADAPTER = "postgresql"
+DATABASE = "tithe_db"
+ENCODING = 'utf8'
+TEMPLATE = 'template0'
+TIMEOUT = 5000
+POOL = 5
+
+def load_dotcloud_env
+  env = YAML.load(IO.read('/home/dotcloud/environment.yml'))
 end
+
+def overwrite_database_file
+  env = load_dotcloud_env
+  database = {
+    'production' => {
+      'adapter' => DB_ADAPTER,
+      'database' => DATABASE,
+      'host' => env['DOTCLOUD_DB_SQL_HOST'],
+      'port' => env['DOTCLOUD_DB_SQL_PORT'].to_i,
+      'username' => env['DOTCLOUD_DB_SQL_LOGIN'],
+      'password' => env['DOTCLOUD_DB_SQL_PASSWORD'],
+      'encoding' => ENCODING,
+      'template' => TEMPLATE,
+      'timeout' => TIMEOUT,
+      'pool' => POOL
+    }
+  }
+  File.open('config/database.yml', 'w') do |file|
+    file.write database.to_yaml
+  end
+end
+
+puts '=== Start to overwrite database.yml ==='
+overwrite_database_file
+puts '=== Finished overwriting! ==='
