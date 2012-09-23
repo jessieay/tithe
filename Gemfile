@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'json'
 gem 'stripe'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'shoulda-matchers'
