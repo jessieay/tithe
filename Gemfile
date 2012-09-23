@@ -9,6 +9,7 @@ gem 'haml-rails'
 gem "twitter-bootstrap-rails"
 
 group :development, :test do
+  gem 'quiet_assets'
   gem 'shoulda-matchers'
   gem 'rspec-rails'
   gem 'guard-rspec'

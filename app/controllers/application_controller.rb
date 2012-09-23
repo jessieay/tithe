@@ -16,4 +16,7 @@ class ApplicationController < ActionController::Base
     redirect_to login_path unless current_user
   end
 
+  def check_current_user
+    redirect_to root_path if current_user
+  end
 end

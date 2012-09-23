@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :check_current_user
+
   def new
     @user = User.new
   end

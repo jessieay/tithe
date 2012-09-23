@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_filter :check_current_user, :only => [ :new, :create ]
+
   def new
   end
 
@@ -16,4 +18,5 @@ class SessionsController < ApplicationController
     session.clear
     redirect_to root_path, :notice => "Logged out!"
   end
+
 end
