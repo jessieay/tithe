@@ -11,7 +11,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rb-fsevent'
-  gem 'rb-inotify'
   gem 'factory_girl_rails'
   gem 'faker'
 end
