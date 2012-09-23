@@ -70,7 +70,7 @@ GEM
       thor (~> 0.14)
     json (1.7.5)
     libv8 (3.3.10.4)
-    listen (0.5.1)
+    listen (0.5.2)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -105,6 +105,8 @@ GEM
     rb-fsevent (0.9.1)
     rdoc (3.12)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -165,6 +167,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda-matchers
-  therubyracer
   stripe
+  therubyracer
   uglifier (>= 1.0.3)
