@@ -16,3 +16,6 @@
 
 # Ignore Stripe.rb file with sensitive api info
 stripe.rb
+
+.swp
+.orig
