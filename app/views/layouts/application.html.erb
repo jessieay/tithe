@@ -7,11 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Tithe" %></title>
     <%= csrf_meta_tags %>
     <%= tag :meta, :name => "stripe-key", :content => ENV['STRIPE_PUBLIC_TEST_KEY'] %>
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]-->
-
+    <%= render 'layouts/shim' %>
     <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
   <body>
@@ -27,31 +23,7 @@
         </div><!--/row-->
       </div><!--/content-->
   </br></br>
-  <div class="row">
-    <div class="span1">
-          <%= image_tag("icon.png") %>
-        </div>
-        <div class="span3">
-          <h3>Step 1</h3>
-          <p>Find the organizations and agencies that you want to support.  Our extensive database offers unique insights into each organization's services.</p>
-        </div>
-       <div class="span1">
-          <%= image_tag("icon.png") %>
-       </div>
-       <div class="span3">
-          <h3>Step 2</h3>
-          <p>Tithe's easy-to-use interface allows you to make a one-time contribution or a monthly payment.  Cancel at anytime.</p>
-        </div>
-        
-        <div class="span1">
-          <%= image_tag("icon.png") %>
-        </div>
-        <div class="span3">
-          <h3>Step 3</h3>
-          <p>Receive regular updates on how your supported organizations are doing.  Meet and communicate with others who share similar interests.</p>
-        </div>
-    </div>
-  <p></p>
+   
     <%= render 'layouts/footer' %>
     </div> <!-- /container -->
 
