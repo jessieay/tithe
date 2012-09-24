@@ -22,7 +22,7 @@ describe SessionsController do
       end
 
       it 'redirects to root_path' do
-        response.should redirect_to(root_path)
+        response.should redirect_to(organizations_path)
       end
     end
 
