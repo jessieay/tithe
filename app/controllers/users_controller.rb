@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       Notifier.welcome(@user).deliver
       self.current_user = @user
-      redirect_to root_path, :notice => "Signed up!"
+      redirect_to organizations_path, :notice => "Signed up!"
     else
       flash.now[:error] = 'There was a problem creating your account'
       render "new"
