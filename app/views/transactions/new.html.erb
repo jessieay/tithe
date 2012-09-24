@@ -1,4 +1,4 @@
-<h1>Signing up for "<%= "****" %>"</h1>
+<h1>Make a contribution</h1>
 
 <%= form_for @transaction do |f| %>
   <% if @transaction.errors.any? %>
@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :amount, "Monthly Contribution.  You may cancel at anytime" %>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, :placeholder => "$" %>
   </div>
   <% if @transaction.stripe_card_token.present? %>
     Credit card information has already been provided.
@@ -41,8 +41,8 @@
     <noscript>JavaScript is not enabled and is required for this form. Please enable it in your web browser settings.</noscript>
   </div>
   <div class="actions">
-    <%= f.submit "Contribute!" %>
+    <%= f.submit "Contribute!", :class => "btn btn-primary" %>
   </div>
 <% end %>
 
-<%=@transaction %>
+<%=debug @transaction %>
