@@ -1,10 +1,10 @@
 class Notifier < ActionMailer::Base
-  default :from => "yay@tithe.boon.gl"
+  default :from => "Tithe <welcome@tithe.boon.gl>"
 
   # send a signup email to the user, pass in the user object that contains the user's email address
-  def signup_email(user)
-    mail( :to => user.email,
-    :subject => "Thanks for signing up" )
+  def welcome(user)
+    @user = user
+    mail( :to => user.email, :subject => "Welcome to Tithe!" )
   end
 end
 

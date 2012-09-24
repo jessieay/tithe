@@ -1,0 +1,8 @@
+#myCarousel{ :class => "carousel slide" }
+  .carousel-inner
+    %div{ :class => "active item" }= image_tag("slide_a.jpg")
+    .item= image_tag("slide_b.jpg")
+    .item= image_tag("slide_c.jpg")
+    .item= image_tag("slide_d.jpg")
+  = link_to("‹", "#myCarousel", :class => "carousel-control left", "data-slide" => "prev")
+  = link_to("›", "#myCarousel", :class => "carousel-control right", "data-slide" => "next")
