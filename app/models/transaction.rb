@@ -7,7 +7,7 @@ class Transaction < ActiveRecord::Base
 
   def save_with_payment
     if valid?
-      customer = Stripe::Customer.create(description: self.user.email, card: stripe_card_token)
+      customer = Stripe::Customer.create(:description => self.user.email, :card => stripe_card_token)
       self.stripe_customer_token = customer.id
       save!
     end

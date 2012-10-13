@@ -7,7 +7,7 @@ class OrganizationsController < ApplicationController
   def create
     @organization = Organization.new(params[:organization])
     if @organization.save
-      redirect_to @organization, notice: "Organization saved successfully."
+      redirect_to @organization, :notice => "Organization saved successfully."
     else
       render :new
     end
@@ -24,14 +24,14 @@ class OrganizationsController < ApplicationController
   def update
     @organization = Organization.find(params[:id])
     if @organization.update_attributes(params[:organization])
-     redirect_to @organization, notice: 'Organization was successfully updated.'
+     redirect_to @organization, :notice => 'Organization was successfully updated.'
     end
   end
 
   def destroy
      @organization = Organization.find(params[:id])
      @organization.destroy
-     redirect_to organizations_path, notice: 'Organization was successfully deleted.'
+     redirect_to organizations_path, :notice => 'Organization was successfully deleted.'
   end
 
   def index
