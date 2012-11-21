@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby'
 gem 'stripe'
 gem 'haml-rails'
-gem "twitter-bootstrap-rails"
+gem "bootstrap-sass"
 
 group :development, :test do
   gem 'quiet_assets'
