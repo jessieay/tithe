@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '3.2.8'
+gem 'rails'
 gem 'pg'
 gem 'jquery-rails'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 gem 'stripe'
 gem 'haml-rails'
 gem "twitter-bootstrap-rails"
