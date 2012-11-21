@@ -1,0 +1,29 @@
+%footer
+  .container
+    .row
+      .span3
+        #jstwitter
+          %h3 Twitter Feed
+      .span3
+        %h3 Latest News
+        %p
+          Tithe launches at SF Startup Weekend.
+          = link_to "Read More", "http://swbay.startupweekend.org/"
+        %p
+          Anonymous donor makes $1M contribution to Big Bend National Park.
+          %a{:href => "#"}Read More
+      .span3
+        %h3 Contact Us!
+        Have a question or comment? We can help you!
+        %br
+        %br
+        by phone: (415)-453-5555
+        %br
+        by mail: titheswsf@gmail.com
+      .span3
+        %h3 Newsletter
+        %p Subscribe to our newsletter and get the latest updates!
+        %form{:action => "#", :id => "subscribe-form", :method => "post"}
+          %input{:type => "text", :name => "email", :id => "email", :placeholder => "Your Email Address"}
+          %button{:type => "submit", :class => "btn btn-primary"} Sign Up
+    %p &copy; Tithe 2012
