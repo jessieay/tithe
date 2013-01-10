@@ -31,3 +31,7 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'execjs'
 end
+
+group :test do
+  gem 'fakeweb'
+end
