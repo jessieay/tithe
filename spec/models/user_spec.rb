@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
   let(:user) { FactoryGirl.create(:user) }
-  
+
   it { should have_many(:organizations) }
   it { should have_many(:transactions) }
   it { should validate_uniqueness_of(:email) }
